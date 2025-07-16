@@ -27,6 +27,17 @@ class CBS_TabbedSlider {
             var swiper2 = new Swiper(".tabbedSwiper", {
               loop: true,
               spaceBetween: 0,
+              speed: 1000,
+              effect: "creative",
+              creativeEffect: {
+                prev: {
+                  shadow: true,
+                  translate: ["100%", 0, 0],
+                },
+                next: {
+                  translate: ["-100%", 0, 0],
+                },
+              },
               navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
@@ -34,6 +45,16 @@ class CBS_TabbedSlider {
               thumbs: {
                 swiper: swiper,
               },
+              on:{
+                slideChangeTransitionStart: function () {
+                  document.getElementById("transition-overlay").classList.add("active");
+                },
+                slideChangeTransitionEnd: function () {
+
+                    document.getElementById("transition-overlay").classList.remove("active");
+
+                } 
+              }
             });
 
             // Initialize the Swiper with proper configuration to avoid scroll conflicts

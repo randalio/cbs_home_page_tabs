@@ -55,12 +55,31 @@ var CBS_TabbedSlider = /*#__PURE__*/function () {
         var swiper2 = new Swiper(".tabbedSwiper", {
           loop: true,
           spaceBetween: 0,
+          speed: 1000,
+          effect: "creative",
+          creativeEffect: {
+            prev: {
+              shadow: true,
+              translate: ["100%", 0, 0]
+            },
+            next: {
+              translate: ["-100%", 0, 0]
+            }
+          },
           navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev"
           },
           thumbs: {
             swiper: swiper
+          },
+          on: {
+            slideChangeTransitionStart: function slideChangeTransitionStart() {
+              document.getElementById("transition-overlay").classList.add("active");
+            },
+            slideChangeTransitionEnd: function slideChangeTransitionEnd() {
+              document.getElementById("transition-overlay").classList.remove("active");
+            }
           }
         });
 

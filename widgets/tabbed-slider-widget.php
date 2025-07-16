@@ -186,38 +186,46 @@ class Elementor_Tabbed_Slider_Widget extends \Elementor\Widget_Base {
 
 
 
+            <div id="transition-overlay"></div>
 
             <div class="tabbed-slider-footer">
 
-                 <div class="slider-title">
-                    <h1>CBS Management Consulting Firm</h1>
-                </div>
+                <div class="tabbed-slider-footer-inner">
 
-                <div class="swiper tabbedSwiperTabs tabbed-slider-wrapper-inner">
-                    <div class="swiper-wrapper">
-                        <?php foreach ( $settings['slides'] as $index => $slide ) : ?>
-                            <div class="swiper-slide">
-                                <div class="slide-content">
-                                    <p class="slide-title"><?php echo esc_html( $slide['slide_name'] ); ?></p>
-                                </div>
-                            </div>
-                        <?php endforeach; ?>
+
+                    <div class="slider-title">
+                        <h1>CBS Management Consulting Firm</h1>
                     </div>
 
-                    <!-- Add Pagination if needed -->
-                    <div class="swiper-pagination"></div>
+                    <div class="swiper tabbedSwiperTabs tabbed-slider-wrapper-inner">
+                        <div class="swiper-wrapper">
+                            <?php foreach ( $settings['slides'] as $index => $slide ) : ?>
+                                <div class="swiper-slide">
+                                    <div class="slide-content">
+                                        <p class="slide-title"><?php echo esc_html( $slide['slide_name'] ); ?></p>
+                                    </div>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+
+                        <!-- Add Pagination if needed -->
+                        <div class="swiper-pagination"></div>
+
+                    </div>
+
+                    <div class="scroll-down">
+                        <a href="#scrolldown">
+                            <span class="scroll-text"><?php _e( 'Scroll', 'elementor-tabbed-slider' ); ?></span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52" fill="none">
+                                <path d="M11.4597 21.3824L25.8281 35.7509L40.1965 21.3824" stroke="white" stroke-width="2"/>
+                                <circle cx="26" cy="26" r="25" stroke="white" stroke-width="2"/>
+                            </svg>
+                        </a>
+                    </div>
+
 
                 </div>
 
-                <div class="scroll-down">
-                    <a href="#scrolldown">
-                        <span class="scroll-text"><?php _e( 'Scroll', 'elementor-tabbed-slider' ); ?></span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52" fill="none">
-                            <path d="M11.4597 21.3824L25.8281 35.7509L40.1965 21.3824" stroke="white" stroke-width="2"/>
-                            <circle cx="26" cy="26" r="25" stroke="white" stroke-width="2"/>
-                        </svg>
-                    </a>
-                </div>
             </div>
 
             
