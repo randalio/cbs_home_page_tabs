@@ -117,15 +117,12 @@
   position: absolute;
   bottom: 0%;
   padding-bottom: 7.5rem;
-  padding-left: 1.5rem;
   display: flex;
   flex-wrap: wrap;
 }
 @media (max-width: 767px) {
-  .tabbed-slider-footer {
-    padding-bottom: 1.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+  .tabbed-slider-footer-inner {
+    padding-bottom: 2.5rem;
   }
 }
 
@@ -138,6 +135,8 @@
   .slider-title {
     flex-basis: 100%;
     margin-bottom: 1.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }
 
