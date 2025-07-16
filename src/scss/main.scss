@@ -1,0 +1,262 @@
+.tabbedSwiper{
+    position: relative;
+    z-index: 1;
+    
+
+    .swiper-slide{
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-size: cover;
+
+        &:before{
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index:1;
+            pointer-events: none;
+            background-image: linear-gradient(270deg, rgba(211, 211, 211, 0.25) 0%, rgba(211, 211, 211, 0.25) 10%, #030F33 100%),
+                        linear-gradient(180deg, rgba(247, 248, 248, 0.00) 0%, rgba(3, 15, 51, 0.25) 70%, #030F33 100%);
+        }
+        
+
+        .slide-content {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            color: #ffffff;
+            max-width: 1500px;
+            margin: auto;
+            flex-grow: 1;
+            z-index: 2;
+
+            @media (max-width: 767px) {
+                // padding-bottom: 10rem;
+                padding-top: 8rem;
+                margin-top: 0;
+                justify-content: flex-start;
+            }
+
+        }
+        
+        .slide-title {
+            color: #FFF;
+            text-shadow: 0px 0px 3px rgba(0, 147, 208, 0.25);
+            font-family: "Nunito Sans";
+            font-size: 1.3125rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%;
+            letter-spacing: -0.01313rem;
+        }
+        
+        .slide-text {
+            color: #FFF;
+            text-shadow: 0px 0px 5px rgba(3, 15, 51, 0.25);
+            font-family: "Nunito Sans";
+            font-size: 4rem;
+            font-size: clamp( 2.5rem, 5vw, 4rem );
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%;
+            letter-spacing: -0.04rem;
+            max-width: 42rem;
+            margin-bottom: 2rem;
+        }
+        
+        .slide-link-button {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            align-self: flex-start;
+            font-family: "Barlow Condensed", sans-serif;
+            font-size: 1.125rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: 0.23625rem;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+
+            &:hover{
+                color: #FFF03B;
+                
+                & svg *{
+                    stroke: #FFF03B;
+                }
+            }
+        }
+        
+        .slide-link-button svg {
+            transition: transform 0.3s ease;
+        }
+        
+        // .slide-link-button:hover {
+        //     color: #fff;
+        // }
+        
+        .slide-link-button:hover svg {
+            transform: rotate(45deg);
+        }
+        
+        
+    }
+
+
+}
+
+.tabbed-slider{
+    &-footer{
+        max-width: 1500px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 16;
+        width: 100%;
+        transform: translateY(-100%);
+        padding-bottom: 7.5rem;
+        padding-left: 1.5rem;
+
+        @media (max-width: 767px) {
+            padding-bottom: 1.5rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+}
+
+.slider-title {
+    flex-basis: calc(100% - 9rem);
+    border-bottom: 2px solid #fff;
+    margin-bottom: 0.5rem;
+
+    @media (max-width: 767px) {
+        flex-basis: 100%;
+        margin-bottom: 1.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+.slider-title h1 {
+    color: #FFF;
+    text-shadow: 0px 0px 3px rgba(3, 15, 51, 0.25);
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 1.5rem;
+    font-size: clamp( 1.125rem, 2.5vw, 1.5rem );
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: -0.015rem;
+    margin-bottom: 1.5rem;
+}
+
+
+.tabbedSwiperTabs{
+    flex-basis: calc(100% - 9rem);
+    margin-left: 0;
+
+    height: auto; /* Default for desktop */
+      
+    @media (max-width: 767px) {
+        flex-basis: 100%;
+        height: 200px; /* Adjust this value based on your slide height */
+    }
+
+    &.swiper{
+        margin-left: 0;
+    }
+
+    & .swiper-wrapper{
+        justify-content: space-between;
+    }
+
+
+
+    .swiper-slide{
+        width: 25%;
+        cursor: pointer;
+        justify-content: flex-end;
+        display: flex;
+        flex-direction: column;
+        max-width: max-content;
+
+        @media (max-width: 767px) {
+            width: 100%;
+            max-width: 100%;
+            justify-content: center;
+            align-items: stretch;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        p.slide-title{
+            border-top: 4px solid #fff;
+            max-width: max-content;
+            color: #FFF;
+            text-shadow: 0px 0px 3px rgba(0, 147, 208, 0.25);
+            font-family: "Nunito Sans";
+            font-size: 1.3125rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 100%; /* 1.3125rem */
+            letter-spacing: -0.01313rem;
+            padding-top: 1.125rem;
+
+            @media (max-width: 767px) {
+                width: 100%;
+                max-width: 100%;
+                padding-top: .125rem;
+
+            }
+
+        }
+
+        &.swiper-slide-thumb-active{
+            p.slide-title{
+                border-top: 4px solid #00bcd4;
+                
+            }
+        }
+    }
+}
+
+
+.scroll-down{
+    margin: auto;
+
+    @media (max-width: 767px) {
+        margin-left: auto;
+    }
+
+
+    a{
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+        font-family: 'Nunito Sans', Sans-serif;
+        font-size: 1.3125rem;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 150%; /* 1.96875rem */
+        letter-spacing: -0.01313rem;
+    
+        &:hover{
+            color: #FFF03B;
+    
+            & svg *{
+                stroke: #FFF03B;
+            }
+        }
+    }
+}
