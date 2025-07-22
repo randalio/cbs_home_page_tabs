@@ -17,6 +17,11 @@
   background-size: cover;
   background-position: center center;
 }
+@media screen and (max-width: 1024px) {
+  .tabbedSwiper .swiper-slide {
+    min-height: 800px;
+  }
+}
 .tabbedSwiper .swiper-slide:before {
   content: "";
   display: block;
