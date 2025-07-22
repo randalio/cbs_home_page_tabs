@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Elementor Tabbed Slider
  * Description: A custom Elementor widget that creates a tabbed slider with background images, text, and links
- * Version: 1.0.0
+ * Version: 1.1
  * Author: Your Name
  * Author URI: https://yourwebsite.com
  * Text Domain: elementor-tabbed-slider
