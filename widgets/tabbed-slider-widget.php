@@ -159,9 +159,18 @@ class Elementor_Tabbed_Slider_Widget extends \Elementor\Widget_Base {
                             $this->add_link_attributes( 'slide-link-' . $index, $slide['slide_link'] );
                             $link_attrs = $this->get_render_attribute_string( 'slide-link-' . $index );
                         }
+
+                        if( $slide['slide_background_image']['id'] ){
+                            $background_image = wp_get_attachment_image_src( $slide['slide_background_image']['id'], 'large' )[0];
+                        }else{
+                            $background_image = $slide['slide_background_image']['url'];
+                        }
+
+                       //print_r($background_image );
+
                     ?>
                         <div class="swiper-slide" 
-                            style="background-image: url(<?php echo esc_url( $slide['slide_background_image']['url'] ); ?>);">
+                            style="background-image: url(<?php echo esc_url( $background_image ); ?>);">
                             <div class="slide-content">
                                 <p class="slide-title"><?php echo esc_html( $slide['slide_eyebrow'] ); ?></p>
                                 <h2 class="slide-text"><?php echo esc_html( $slide['slide_text'] ); ?></h2>
