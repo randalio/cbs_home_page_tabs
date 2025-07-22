@@ -14,6 +14,7 @@
         display: flex;
         flex-direction: column;
         background-size: cover;
+        background-position: center center;
 
         &:before{
             content: '';
@@ -252,6 +253,7 @@
 
 .scroll-down{
     margin: auto;
+    color: #fff;
 
     @media (max-width: 1024px) {
         margin-left: auto;
@@ -294,6 +296,10 @@
     opacity: 1;
     transition: all 1s ease;
     background-color:rgba(1, 187, 212, 0.5);
+
+    @media screen and (max-width: 1024px){
+        display: none;
+    }
 
 
     &:before{
