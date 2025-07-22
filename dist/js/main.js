@@ -56,10 +56,10 @@ var CBS_TabbedSlider = /*#__PURE__*/function () {
           loop: true,
           spaceBetween: 0,
           speed: 1000,
+          allowTouchMove: false,
           effect: "creative",
           creativeEffect: {
             prev: {
-              shadow: true,
               translate: ["100%", 0, 0]
             },
             next: {
