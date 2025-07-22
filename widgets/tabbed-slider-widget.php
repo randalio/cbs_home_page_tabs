@@ -161,7 +161,7 @@ class Elementor_Tabbed_Slider_Widget extends \Elementor\Widget_Base {
                         }
 
                         if( $slide['slide_background_image']['id'] ){
-                            $background_image = wp_get_attachment_image_src( $slide['slide_background_image']['id'], 'large' )[0];
+                            $background_image = wp_get_attachment_image_src( $slide['slide_background_image']['id'], '1536x1536' )[0];
                         }else{
                             $background_image = $slide['slide_background_image']['url'];
                         }
