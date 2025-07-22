@@ -220,7 +220,7 @@
 
 .scroll-down {
   margin: auto;
-  color: #fff;
+  color: #fff !important;
 }
 @media (max-width: 1024px) {
   .scroll-down {
@@ -230,7 +230,7 @@
 .scroll-down a {
   display: flex;
   flex-direction: column;
-  color: #fff;
+  color: #fff !important;
   font-family: "Nunito Sans", Sans-serif;
   font-size: 1.3125rem;
   font-style: normal;
