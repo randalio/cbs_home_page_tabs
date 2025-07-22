@@ -16,7 +16,7 @@ class CBS_TabbedSlider {
               freeMode: true,
               watchSlidesProgress: true,
               breakpoints: {
-                768: {
+                1024: {
                   direction: 'horizontal',
                 }
               },

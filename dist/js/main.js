@@ -45,7 +45,7 @@ var CBS_TabbedSlider = /*#__PURE__*/function () {
           freeMode: true,
           watchSlidesProgress: true,
           breakpoints: {
-            768: {
+            1024: {
               direction: 'horizontal'
             }
           },
