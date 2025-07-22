@@ -19,7 +19,7 @@
 }
 @media screen and (max-width: 1024px) {
   .tabbedSwiper .swiper-slide {
-    min-height: 800px;
+    min-height: 920px;
   }
 }
 .tabbedSwiper .swiper-slide:before {
