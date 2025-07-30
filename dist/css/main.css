@@ -131,6 +131,7 @@
 @media (max-width: 1024px) {
   .tabbed-slider-footer-inner {
     padding-bottom: 2.5rem;
+    padding-left: 0;
   }
 }
 
